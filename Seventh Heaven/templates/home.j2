@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Seventh Heaven</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='7heaven.ico') }}">
+        <link rel="stylesheet" href="/static/styles/styles.css">
+    </head>
+    <body>
+        <div id="logo">
+            <a href="/"><img src="/static/images/7th_Heaven_Logo.webp" width="200" height="200"/></a>
+        </div>
+        <table width="770" border="0" cellpadding="10" cellspacing="0">
+            <tr>
+                <td>
+                    <table id="buttons" cellpadding="10">
+                        {%for button in button_titles%}
+                            {%if button == name%}
+                                <td width="10">{{button}}</td>
+                            {%else%}
+                                <td width="10">
+                                    <a href="/{{button.lower().replace(' ', '-')}}">{{button}}</a>
+                                </td>
+                            {%endif%}
+                        {%endfor%}
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td width="408">
+                    <table width="408" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td>
+                                <div id="about">
+                                    <p>Seventh Heaven isn't your ordinary bar.  Its welcoming and friendly atmosphere makes it the perfect place to 
+                                    unwind after a stressful day.  There are a lot of things to enjoy at this bar, such as drinks (obviously), finger 
+                                    food, and even entertainment, all right here!  So just kick back and relax as you enjoy a nice cold drink here!  
+                                    Seventh Heaven is located at 503 7th Avenue, Sector 3, Edge, 13197.</p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <h2> About Us </h2>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h3> Tifa Lockhart</h3>
+                                <img src="/static/images/tifa.JPEG" width="275" height="155"/>
+                                <p>Hello!  I'm Tifa Lockhart, and I'm the bartender and owner of Seventh Heaven.  I grew up in Nibelheim and moved
+                                to Midgar after my hometown was destroyed.  If you're having a bad day, I'm always up for a chat!  Just try to be 
+                                patient with me, as I do have a lot of customers.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h3> Cloud Strife </h3>
+                                <img src="/static/images/cloud.JPEG" width="275" height="183"/>
+                                <p>I'm Cloud Strife. Ex-SOLDIER, mercenary.  I dunno why I have a section on here.</p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <table>
+                        <tr>
+                            <td>
+                                <img src="/static/images/cooking.png" width="100" height="61"/>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <img src="/static/images/cooking-real.png" width="100" height="64"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="/static/images/drinking-real.png" width="100" height="100"/>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <img src="/static/images/drinking.png" width="100" height="106"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="/static/images/darts.png" width="87" height="100"/>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <img src="/static/images/darts-real.png" width="100" height="100"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="/static/images/pinball-real.png" width="100" height="125"/>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <img src="/static/images/pinball.png" width="100" height="100"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="/static/images/tv.png" width="100" height="100"/>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <img src="/static/images/tv-real.png" width="100" height="57"/>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>           
+        </table>
+    </body>
+</html>

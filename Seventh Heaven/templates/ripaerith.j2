@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Seventh Heaven</title>
+        <link rel="stylesheet" href="/static/styles/styles.css">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='7heaven.ico') }}">
+        <link href="https://www.dafont.com/cloister-black.font" rel="stylesheet">
+    </head>
+    <body>
+        <div id="logo">
+            <a href="/"><img src="/static/images/7th_Heaven_Logo.webp" width="200" height="200"/></a>
+        </div>
+        <table width="770" border="0" cellpadding="10" cellspacing="0">
+            <tr>
+                <td>
+                    <table id="buttons" cellpadding="10">
+                        {%for button in button_titles%}
+                            {%if button == name%}
+                                <td width="10">{{button}}</td>
+                            {%else%}
+                                <td width="10">
+                                    <a href="/{{button.lower().replace(' ', '-')}}">{{button}}</a>
+                                </td>
+                            {%endif%}
+                        {%endfor%}
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td id="buttons">
+                    <a href="/news">←News</a>
+                </td>
+            </tr>
+            <tr>
+                <td id="articles" width="408">
+                    <h1>
+                        In Loving Memory of Aerith Gainsborough
+                    </h1>
+                    <p>Today is a sad day.  The world lost an amazing, bright young woman named Aerith Gainsborough.</p>
+                    <p>Aerith was not only a valued customer at Seventh Heaven, but also a dear friend of ours.  She was 
+                        one of the kindest, most cheerful people I had ever known in my life.  She was an amazing friend, 
+                        and just so full of life, but tragically, her life was cut short by Sephiroth after he impaled her 
+                        with his infamous sword known as the Masamune.</p>
+                    <p>A private funeral service was held for Aerith at the Forgotten City.  She will be dearly missed, 
+                        but never forgotten.</p>
+                    <p>Sephiroth will not get away with this.  We are doing everything we can to bring him to justice and
+                        make sure he can never harm another innocent person ever again.</p>
+                    <img src="/static/images/aerith.JPEG"/>
+                    <figcaption>Aerith Gainsborough (1972-1997)</figcaption>
+                </td>
+                <td>
+                    <table>
+                        <tr>
+                            <td>
+                                <img src="/static/images/cooking.png" width="100" height="61"/>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <img src="/static/images/cooking-real.png" width="100" height="64"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="/static/images/drinking-real.png" width="100" height="100"/>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <img src="/static/images/drinking.png" width="100" height="106"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="/static/images/darts.png" width="87" height="100"/>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <img src="/static/images/darts-real.png" width="100" height="100"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="/static/images/pinball-real.png" width="100" height="125"/>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <img src="/static/images/pinball.png" width="100" height="100"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="/static/images/tv.png" width="100" height="100"/>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <img src="/static/images/tv-real.png" width="100" height="57"/>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>           
+        </table>
+    </body>
+</html>

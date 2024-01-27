@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Seventh Heaven</title>
+        <link rel="stylesheet" href="/static/styles/styles.css">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='7heaven.ico') }}">
+        <link href="https://www.dafont.com/cloister-black.font" rel="stylesheet">
+    </head>
+    <body>
+        <div id="logo">
+            <a href="/"><img src="/static/images/7th_Heaven_Logo.webp" width="200" height="200"/></a>
+        </div>
+        <table width="770" border="0" cellpadding="10" cellspacing="0">
+            <tr>
+                <td>
+                    <table id="buttons" cellpadding="10">
+                        {%for button in button_titles%}
+                            {%if button == name%}
+                                <td width="10">{{button}}</td>
+                            {%else%}
+                                <td width="10">
+                                    <a href="/{{button.lower().replace(' ', '-')}}">{{button}}</a>
+                                </td>
+                            {%endif%}
+                        {%endfor%}
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td width="500">
+                    <table cellspacing="10">
+                        <tr>
+                            <td id="drinks">
+                                <table width="408" border="1" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <th>Drink</th>
+                                        <th>Description</th>
+                                        <th>Type</th>
+                                        <th>Price</th>
+                                    </tr>
+                                    {%for drink in drinks%}
+                                        <tr>
+                                            <td>
+                                                {{drink.name}}
+                                            </td>
+                                            <td>
+                                                {{drink.description}}
+                                            </td>
+                                            <td>
+                                                {{drink.type}}
+                                            </td>
+                                            <td>
+                                                {{drink.cost}} gil
+                                            </td>
+                                        </tr>
+                                    {%endfor%}
+                                </table>
+                            </td>
+                            <td id="food">
+                                <table width="408" border="1" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <th>Dish</th>
+                                        <th>Description</th>
+                                        <th>Price</th>
+                                    </tr>
+                                    {%for dish in dishes%}
+                                        <tr>
+                                            <td>
+                                                {{dish.name}}
+                                            </td>
+                                            <td>
+                                                {{dish.description}}
+                                            </td>
+                                            <td>
+                                                {{dish.cost}} gil
+                                            </td>
+                                        </tr>
+                                    {%endfor%}
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <table>
+                        <tr>
+                            <td>
+                                <img src="/static/images/cooking.png" width="100" height="61"/>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <img src="/static/images/cooking-real.png" width="100" height="64"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="/static/images/drinking-real.png" width="100" height="100"/>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <img src="/static/images/drinking.png" width="100" height="106"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="/static/images/darts.png" width="87" height="100"/>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <img src="/static/images/darts-real.png" width="100" height="100"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="/static/images/pinball-real.png" width="100" height="125"/>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <img src="/static/images/pinball.png" width="100" height="100"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="/static/images/tv.png" width="100" height="100"/>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <img src="/static/images/tv-real.png" width="100" height="57"/>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>           
+        </table>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+@font-face {
+    font-family: "CloisterBlack";
+    src: url(fonts/CloisterBlack.ttf);
+}
+
+a:link {
+    color: #ffff00;
+}
+
+a:visited {
+    color: #00ff00;
+}
+
+body{
+    background-color: #17429e;
+    color: #ffff00;
+}
+
+h2 {
+    font-family: 'CloisterBlack';
+}
+
+h3 {
+    font-family: 'CloisterBlack';
+}
+
+#buttons {
+    font-size: 125%;
+    font-family: 'CloisterBlack';
+}
+
+#articles {
+    vertical-align: top;
+}
+
+#food {
+    vertical-align: top;
+}
+
+#drinks {
+    vertical-align: top;
+}
